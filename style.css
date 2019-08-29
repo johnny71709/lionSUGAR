@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#nav {
+  background-color: #333;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 80%;
+      grid-template-columns: 30% 80%;
+  color: gold;
+}
+
+#nav a {
+  text-decoration: none;
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */
