@@ -12,6 +12,15 @@ mixin title(img, textZH, textEN)
         br
         span=textEN
 
+mixin loaction-box(nameZh, nameEg, img)
+    div(class="location-box")
+        div(class="location-title")
+            div(class="location-text")
+                span=nameZh
+                br
+                span=nameEg
+            img(src="images/location.png", alt="據點")
+        img(src="images/" + img + ".png", alt="據點")
 
 <!DOCTYPE html>
 html(lang="zh")
@@ -34,8 +43,32 @@ html(lang="zh")
         section(id="banner")
 
         section(id="about")
-            +title("home", "關於我們", "ABOUT")
-            
-        +title("location", "全球據點", "LOCATIONS")
-        +title("hot", "熱門經典", "CLASSICAL")
-        +title("contact", "加盟專區", "FRANCHISEE")
+            div(class="bg bg-about")
+            div(class="container")
+                +title("home", "關於我們", "ABOUT")
+
+
+        section(id="location")
+            div(class="bg bg-location")
+            div(class="container")
+                +title("location", "全球據點", "LOCATIONS")
+                
+                div(id="location-container")
+                    +loaction-box("台灣", "Taiwan", "cutmypic")
+                    +loaction-box("台灣", "Taiwan", "cutmypic")
+                    +loaction-box("台灣", "Taiwan", "cutmypic")
+                    +loaction-box("台灣", "Taiwan", "cutmypic")
+                    +loaction-box("台灣", "Taiwan", "cutmypic")
+                    +loaction-box("台灣", "Taiwan", "cutmypic")
+                    +loaction-box("台灣", "Taiwan", "cutmypic")
+                    +loaction-box("台灣", "Taiwan", "cutmypic")
+                    +loaction-box("台灣", "Taiwan", "cutmypic")
+                    +loaction-box("台灣", "Taiwan", "cutmypic")
+                    +loaction-box("台灣", "Taiwan", "cutmypic")
+                    +loaction-box("台灣", "Taiwan", "cutmypic")
+        
+        div(class="container")
+            +title("hot", "熱門經典", "CLASSICAL")
+
+        div(class="container")
+            +title("contact", "加盟專區", "FRANCHISEE")
