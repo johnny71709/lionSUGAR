@@ -24,16 +24,6 @@ body {
   z-index: 10;
 }
 
-#nav #logo {
-  font-size: 1.3em;
-  padding: 0 15px;
-}
-
-#nav #logo #logo-zh {
-  font-size: 0.6em;
-  letter-spacing: 7px;
-}
-
 #nav a {
   text-decoration: none;
   color: white;
@@ -56,6 +46,17 @@ body {
   padding-top: 15px;
 }
 
+.logo {
+  font-size: 1.3em;
+  padding: 0 15px;
+  color: #ffe159;
+}
+
+.logo .logo-zh {
+  font-size: 0.6em;
+  letter-spacing: 7px;
+}
+
 .title {
   color: white;
   display: inline-block;
@@ -72,6 +73,7 @@ body {
 #banner {
   height: 100vh;
   width: 100vw;
+  max-width: 100%;
   background-image: url("https://images.unsplash.com/photo-1504502350688-00f5d59bbdeb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
   background-size: cover;
 }
@@ -79,6 +81,15 @@ body {
 #about {
   height: 90vh;
   position: relative;
+}
+
+#classical {
+  height: 90vh;
+  position: relative;
+}
+
+#classical .classical-box {
+  text-align: center;
 }
 
 .bg {
@@ -93,16 +104,86 @@ body {
 }
 
 .bg-about {
-  background-image: url(img/about.jpg);
+  background-image: url(images/about.jpg);
 }
 
 .bg-location {
-  background-image: url(img/about.jpg);
+  background-image: url(images/about.jpg);
+}
+
+.bg-classical {
+  background-image: url(images/about.jpg);
 }
 
 #location {
-  height: 90vh;
+  min-height: 90vh;
   position: relative;
+}
+
+#location #location-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+#location #location-container .location-title {
+  text-align: right;
+}
+
+#location #location-container .location-title .location-text {
+  color: white;
+  font-size: 0.7em;
+  text-align: center;
+  display: inline-block;
+}
+
+#location .location-img-box {
+  overflow: hidden;
+}
+
+#location .location-img-box img {
+  width: 100%;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#location .location-img-box:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.franchisee-box {
+  text-align: center;
+  padding: 100px 0;
+}
+
+.franchisee-box a {
+  text-decoration: none;
+  color: #ffe159;
+}
+
+.franchisee-box a .logo {
+  font-size: 2.5em;
+}
+
+.franchisee-box a .logo .logo-zh {
+  font-size: 0.65em;
+}
+
+.franchisee-box a h3 {
+  font-size: 2.1em;
+  padding: 10px 0;
+}
+
+footer {
+  text-align: center;
+  color: white;
+  opacity: 0.5;
+  font-size: 0.6em;
+  padding: 20px 0;
+  background-color: #000;
 }
 
 .container {
